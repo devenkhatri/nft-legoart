@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Happy from './components/1-happy'
+// import Happy from './components/1-happy'
 import Neutral from './components/2-neutral'
 import { CardDeck, Card, Button } from 'react-bootstrap'
 
