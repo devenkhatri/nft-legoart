@@ -3,18 +3,18 @@ import Board from 'react-legra'
 const JoyTears = () => {
   return (
     <Board width="500" height="500" style={{ width: '100%', height: 'auto' }}>
-      <Board.Rectangle start={[0, 0]} width={21} height={21} options={{ filled: true, color: 'gray' }} />
+      <Board.Rectangle start={[0, 0]} width={21} height={21} options={{ filled: true, color: '#cccccc' }} />
       <Board.Circle center={[10, 10]} radius={9} options={{ filled: true, color: '#ffde34' }} />
-      <Board.Line from={[3, 8]} to={[5, 6]} options={{ color: 'black' }} />
-      <Board.Line from={[5, 8]} to={[8, 8]} options={{ color: 'black' }} />
+      <Board.Line from={[3, 8]} to={[5, 6]} options={{ color: '#555555' }} />
+      <Board.Line from={[5, 8]} to={[8, 8]} options={{ color: '#555555' }} />
       
-      <Board.Line from={[12, 8]} to={[15, 8]} options={{ color: 'black' }} />
-      <Board.Line from={[15, 6]} to={[17, 8]} options={{ color: 'black' }} />
+      <Board.Line from={[12, 8]} to={[15, 8]} options={{ color: '#555555' }} />
+      <Board.Line from={[15, 6]} to={[17, 8]} options={{ color: '#555555' }} />
       <Board.QuadraticCurve
         from={[5, 14]}
         to={[15, 14]}
         controlPoint={[10, 20]}
-        options={{ filled: true, color: 'black' }}
+        options={{ filled: true, color: '#555555' }}
       />
       <Board.QuadraticCurve
         from={[7, 14]}

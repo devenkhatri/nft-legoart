@@ -5,31 +5,32 @@ import Grinning from './components/2-grinning'
 import Neutral from './components/3-neutral'
 import JoyTears from './components/4-joytears'
 import { Container, Row, Col, Alert, Card, Button } from 'react-bootstrap'
+import {MdAddShoppingCart} from 'react-icons/md'
 
 function App() {
   const generatedImages = [
     {
       title: 'Happy Face',
       description: 'A yellow face with simple, open eyes and a thin, closed smile. Conveys a wide range of positive, happy, and friendly sentiments. Its tone can also be patronizing, passive-aggressive, or ironic, as if saying This is fine when it’s really not.',
-      openseaurl: '#',
+      openseaurl: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/60782615935552673042394379731218678101113581715421289363583362760067824746497',
       renderer: <Happy />
     },
     {
       title: 'Grinning Face',
       description: 'A yellow face with simple, open eyes and a broad, open smile, showing upper teeth and tongue on some platforms. Often conveys general pleasure and good cheer or humor.',
-      openseaurl: '#',
+      openseaurl: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/60782615935552673042394379731218678101113581715421289363583362762266848002049',
       renderer: <Grinning />
     },
     {
       title: 'Neutral Face',
       description: 'A yellow face with simple, open eyes and a flat, closed mouth. Intended to depict a neutral sentiment but often used to convey mild irritation and concern or a deadpan sense of humor.',
-      openseaurl: '#',
+      openseaurl: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/60782615935552673042394379731218678101113581715421289363583362761167336374273',
       renderer: <Neutral />
     },
     {
-      title: 'Tears of Joy - 1',
+      title: 'Tears of Joy',
       description: 'A yellow face with a big grin, uplifted eyebrows, and smiling eyes, each shedding a tear from laughing so hard. Widely used to show something is funny or pleasing. Named the Oxford Dictionaries 2015 Word of the Year, and the most used emoji on all platforms from 2011-2021.',
-      openseaurl: '#',
+      openseaurl: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/60782615935552673042394379731218678101113581715421289363583362763366359629825',
       renderer: <JoyTears />
     },
     {
@@ -114,13 +115,14 @@ function App() {
       <Container fluid>
         <Row>
           {generatedImages && generatedImages.map((imageDetail, index) => {
+            const btnVariant = (index % 2 == 0)?'primary':'success';
             return (
               <Col sm={3} className="mt-4">
                 <Card key={index} className="text-center">
                   <Card.Header as="h5">{imageDetail.title}</Card.Header>
                   <Card.Body>
                     {imageDetail.renderer}
-                    <Button variant="primary">Buy Item</Button>
+                    <Button variant={btnVariant} size="lg" block onClick={()=>{window.open(imageDetail.openseaurl,'_blank')}}><MdAddShoppingCart className="mr-2" />Buy Item</Button>
                   </Card.Body>
                   <Card.Footer className="text-muted">{imageDetail.description}</Card.Footer>
                 </Card>
