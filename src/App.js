@@ -4,11 +4,18 @@ import Happy from './components/1-happy'
 import Grinning from './components/2-grinning'
 import Neutral from './components/3-neutral'
 import JoyTears from './components/4-joytears'
+import ImageTest from './components/imagetest'
 import { Container, Row, Col, Alert, Card, Button } from 'react-bootstrap'
 import {MdAddShoppingCart} from 'react-icons/md'
 
 function App() {
   const generatedImages = [
+    {
+      title: 'Image TEst',
+      description: 'A yellow face with simple, open eyes and a thin, closed smile. Conveys a wide range of positive, happy, and friendly sentiments. Its tone can also be patronizing, passive-aggressive, or ironic, as if saying This is fine when it’s really not.',
+      openseaurl: 'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/60782615935552673042394379731218678101113581715421289363583362760067824746497',
+      renderer: <ImageTest />
+    },
     {
       title: 'Happy Face',
       description: 'A yellow face with simple, open eyes and a thin, closed smile. Conveys a wide range of positive, happy, and friendly sentiments. Its tone can also be patronizing, passive-aggressive, or ironic, as if saying This is fine when it’s really not.',
